@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Tales</title>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Quick Tales
+        </h1>
+        <% if (locals.blogs) { %>
+
+            <% for( let i=0; i < blogs.length; i++ ) { %>
+                <div class="blog">
+                    <h2>
+                        <%= blogs[i].title %>
+                    </h2>
+                    <p class="content">
+                        <%= blogs[i].content.substr(0, 800) %>
+                        <% if (blogs[i].content.length > 800) { %>
+                            <span>...<a href="/blogs/<%= i+1 %>">See more</a></span>
+                        <% } %>
+                    </p>
+                    Author:
+                    <%= blogs[i].author %>
+                    <div class="mod">
+                        <form action="/edit/<%= i+1 %>" method="get">
+                            <input class="button edit" type="submit" value="EDIT">
+                        </form>
+                        <form action="/delete/<%= i+1 %>" method="post">
+                            <input class="button delete" type="submit" value="DELETE">
+                        </form>
+                    </div>
+                </div>
+            <% } %>
+        <% } %>
+        <br />
+        <a href="/addBlog">
+        <button class="button" id="addBlog">
+            Add Blog
+        </button>
+    </a>
+</body>
+</html>

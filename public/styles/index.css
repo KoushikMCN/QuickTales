@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+body{
+    margin: 0 15%;
+    background-color: rebeccapurple;
+}
+
+.container{
+    background-color: white;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 15px;
+}
+
+h1{
+    text-align: center;
+    color: rebeccapurple;
+    font-family: "Playfair Display", serif;
+    padding: 25px;
+}
+
+a{
+    color: blue;
+}
+
+.blog{
+    margin: 1.6rem 0;
+    padding: 1.3rem;
+    border: 2px solid rebeccapurple;
+    border-radius: 3px;
+}
+
+.content{
+    font-size: 1.4rem;
+}
+
+.mod{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+}
+
+.button{
+    padding: 4px;
+}
+
+.edit{
+    border-color: green;
+    border-radius: 5px;
+    color: green;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.delete{
+    font-size: 1rem;
+    border-color: rgb(139, 0, 0);
+    border-radius: 5px;
+    color: red;
+    font-weight: 600;
+}
+
+#addBlog{
+    background-color: rgb(95, 27, 255);
+    border-radius: 3px;
+    color: white;
+}

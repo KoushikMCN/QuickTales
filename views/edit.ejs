@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Tales</title>
+    <link rel="stylesheet" href="/styles/edit.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align: center;">Edit Here</h1>
+    </header>
+    <main>
+        <form action="/blog/<%= id %>" method="post">
+            <div>
+                <p>
+                    <label for="title">Title</label>
+                </p>
+                <input type="text" name="title" id="title" placeholder="Title" value="<%= data.title %>"><br />
+            </div>
+            <div>
+                <p><label for="content">Content</label>
+                </p>
+                <textarea name="content" placeholder="Content" id="content" rows="15"
+                    cols="25"><%= data.content %></textarea><br />
+            </div>
+            <div>
+                <p>
+                    <label for="author">Author</label>
+                </p>
+                <input type="text" name="author" placeholder="Author" id="author" value="<%= data.author %>"><br />
+            </div>
+            <input type="submit" value="SUBMIT" />
+        </form>
+    </main>
+</body>
+
+</html>

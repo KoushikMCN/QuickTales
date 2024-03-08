@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Tales</title>
+    <link rel="stylesheet" href="/styles/new.css">
+</head>
+
+<body>
+    <header>
+        <h1>Quick Tales</h1>
+    </header>
+    <main>
+        <form action="/add" method="post">
+            <div>
+                <p>
+                <label for="title">Title</label></p>
+                <input type="text" name="title" id="title" placeholder="Title"><br />
+            </div>
+            <div>
+                <p>
+                <label for="content">Content</label></p>
+                <textarea name="content" placeholder="Content" id="content" rows="20" cols="15"></textarea><br />
+            </div>
+            <div>
+                <p>
+                <label for="author">Author</label></p>
+                <input type="text" name="author" placeholder="Author" id="author"><br />
+            </div>
+            <input type="submit" value="SUBMIT" />
+        </form>
+    </main>
+</body>
+
+</html>
